@@ -3,7 +3,7 @@ import Main from './components/Main'
 
 function App () {
   return (
-    <div className='flex'>
+    <div className='flex h-screen overflow-hidden'>
       <Sidebar />
       <Main />
     </div>
