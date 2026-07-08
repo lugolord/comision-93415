@@ -1,47 +1,39 @@
 import Button from './Button'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
-function Counter () {
-  const [count, setCount] = useState(0)
+function Counter ({ item }) {
+  const [count, setCount] = useState(1)
+  const { addToCart } = useContext(CartContext)
 
   const handleRestar = () => {
-    if (count === 0) return
+    if (count === 1) return
     setCount(count - 1)
   }
 
-  useEffect(() => {
-    console.log('el counter se actualizo')
-
-    return () => { // funcion de limpieza o cleanup function
-      console.log('el componente se desmonto')
-    } 
-  }, [count]) // array de dependencias
-
-  // [] -> el efecto se va a ejecutar SOLO en el montaje
-  // [a, b] -> el efecto se va a ejecutar en el montaje 
-  // y cuando cambie el valor de "a" o "b"
-  // desmontaje -> funcion de limpieza
-
   return (
     <div>
-      <p>{count}</p>
+      <div className='flex gap-3'>
+        <Button 
+          styles={'bg-black btn btn-square text-white px-3 py-2 rounded cursor-pointer'}
+          onClick={() => setCount(count + 1)}
+        >
+          +
+        </Button>
+        <p>{count}</p>
+        <Button 
+          styles={'btn btn-square bg-black text-white px-3 py-2 rounded cursor-pointer'} 
+          onClick={handleRestar}
+        >
+          -
+        </Button>
+      </div>
       <Button 
-        styles={'bg-green-400 text-white px-3 py-2 rounded cursor-pointer'}
-        onClick={() => setCount(count + 1)}
+        styles={'bg-[#d0bcff] text-purple-900 font-medium px-3 py-2 rounded cursor-pointer w-full mt-3'} 
+        onClick={() => addToCart({...item, count: count})}
       >
-        sumar
-      </Button>
-      <Button 
-        styles={'bg-red-400 text-white px-3 py-2 rounded cursor-pointer'} 
-        onClick={handleRestar}
-      >
-        restar
-      </Button>
-      <Button 
-        styles={'bg-yellow-400 text-white px-3 py-2 rounded cursor-pointer'} 
-        onClick={() => setCount(0)}
-      >
-        reiniciar
+        add to cart
       </Button>
     </div>
   )

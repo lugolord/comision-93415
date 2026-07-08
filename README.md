@@ -1,16 +1,74 @@
-# React + Vite
+# 🛒 Ecommerce React - Luxe Boutique
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de ecommerce desarrollada con React que permite explorar un catálogo de productos, filtrarlos por categoría, consultar el detalle de cada uno, agregarlos al carrito y finalizar una orden de compra utilizando Firebase.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 📦 Listado de productos.
+- 🗂️ Filtrado de productos por categoría.
+- 🔍 Vista de detalle de cada producto.
+- 🛒 Agregar productos al carrito.
+- 👀 Visualización del carrito de compras.
+- ✅ Finalización de la orden de compra.
+- ☁️ Integración con Firebase para almacenamiento de datos.
 
-## React Compiler
+## 🚀 Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** – Biblioteca para construir interfaces de usuario.
+- **React Router** – Navegación entre páginas de la aplicación.
+- **Firebase** – Base de datos y gestión de órdenes.
+- **Tailwind CSS** – Framework de estilos basado en clases de utilidad.
 
-## Expanding the ESLint configuration
+## 📚 Documentación oficial
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React: https://react.dev/
+- React DOM: https://react.dev/reference/react-dom
+- React Router: https://reactrouter.com/
+- Firebase: https://firebase.google.com/docs
+- Tailwind CSS: https://tailwindcss.com/docs
+
+## ⚙️ Instalación
+
+1. Clonar el repositorio.
+
+```bash
+git clone <url-del-repositorio>
+```
+
+2. Ingresar al directorio del proyecto.
+
+```bash
+cd <nombre-del-proyecto>
+```
+
+3. Instalar las dependencias.
+
+```bash
+npm install
+```
+
+4. Ejecutar el proyecto en modo desarrollo.
+
+```bash
+npm run dev
+```
+
+5. Abrir el navegador en la URL indicada por Vite (por defecto `http://localhost:5173`).
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── components/
+├── context/
+├── firebase/
+├── index.css
+├── App.jsx
+└── main.jsx
+```
+
+> La estructura puede variar según la organización del proyecto.
+
+## 👨‍💻 Autor
+
+Desarrollado como proyecto de aprendizaje utilizando React, Firebase y Tailwind CSS.
